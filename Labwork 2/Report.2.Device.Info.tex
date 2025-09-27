@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Labwork 2: Get to know your GPU}
+\author{Phi Doan Minh Luong - 2440046}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+\setlength\parindent{0pt}
+
+\section{GPU information}
+I use Google Colab for this labwork. There is only 1 GPU. Here is the result:
+\begin{itemize}
+    \item Device name: Tesla T4
+    \item Multiprocessor count: 40
+    \item Core count: 2560
+    \item Memory size: 15095 MB
+\end{itemize}
+Numba does not provide a direct API to retrieve the exact number of CUDA cores. However, we can infer the number of CUDA cores by multiplying the number of streaming multiprocessors (SM) by the core count per SM. Because the compute capability of this GPU is (7, 5), we have the core count per SM as 64. Then we multiply it by the number of SM, which is 40, and we will have the total number of cores in this GPU as 2560.
+
+
+\end{document}
