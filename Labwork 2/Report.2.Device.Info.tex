@@ -19,7 +19,7 @@ I use Google Colab for this labwork. There is only 1 GPU. Here is the result:
     \item Core count: 2560
     \item Memory size: 15095 MB
 \end{itemize}
-Numba does not provide a direct API to retrieve the exact number of CUDA cores. However, we can infer the number of CUDA cores by multiplying the number of streaming multiprocessors (SM) by the core count per SM. Because the compute capability of this GPU is (7, 5), we have the core count per SM as 64. Then we multiply it by the number of SM, which is 40, and we will have the total number of cores in this GPU as 2560.
+Numba does not provide a direct API to retrieve the exact number of CUDA cores. However, we can infer the number of CUDA cores by multiplying the number of streaming multiprocessors (SM) by the core count per SM. Because the compute capability of this GPU is (7, 5), we have the core count per SM as 64 \footnote{https://stackoverflow.com/questions/63823395/how-can-i-get-the-number-of-cuda-cores-in-my-gpu-using-python-and-numba}. Then we multiply it by the number of SM, which is 40, and we will have the total number of cores in this GPU as 2560.
 
 
 \end{document}
